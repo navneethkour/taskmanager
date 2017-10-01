@@ -8,7 +8,7 @@ yum install -y httpd24 php56 php56-mysqlnd
 service httpd start
 
 cd /home/ec2-user/
-aws s3 cp s3://webappsrc/app.zip . --region "$region"
+aws s3 cp s3://baanibiren/app.zip . --region "$region"
 unzip app.zip -d /var/www/html/
 
 curl https://amazon-ssm-us-west-2.s3.amazonaws.com/latest/linux_amd64/amazon-ssm-agent.rpm -o amazon-ssm-agent.rpm
